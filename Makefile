@@ -1,9 +1,4 @@
-all: armv6 armv7 arm64
-
-armv6:
-	arm-none-eabi-as -march=armv6 -mthumb --fatal-warnings -o bin/steaks4uce-shellcode.o src/steaks4uce-shellcode.S
-	arm-none-eabi-objcopy -O binary bin/steaks4uce-shellcode.o bin/steaks4uce-shellcode.bin
-	rm bin/steaks4uce-shellcode.o
+all: armv7 arm64
 
 armv7:
 	arm-none-eabi-as -mthumb --fatal-warnings -o bin/limera1n-shellcode.o src/limera1n-shellcode.S
